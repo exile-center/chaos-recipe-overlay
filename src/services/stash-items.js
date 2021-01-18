@@ -26,6 +26,7 @@ const fetchFromStashIndex = async (stashIndex, {account, league, sessionId}) => 
   const rawResponse = await requestPromise({
     uri: encodeURI(`${BASE_URL}?accountName=${account}&league=${league}&tabIndex=${stashIndex}`),
     headers: {
+      'User-Agent': `Chaos Recipe Overlay/v1.1.0`,
       Cookie: `POESESSID=${sessionId}`
     }
   });

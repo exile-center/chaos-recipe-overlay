@@ -7,6 +7,7 @@ const FALLBACK_LEAGUE = 'Standard';
 
 exports.fetchActiveLeagues = async () => {
   const rawResponse = await requestPromise({
+    'User-Agent': `Chaos Recipe Overlay/v1.1.0`,
     uri: LEAGUE_API_URL
   });
 
